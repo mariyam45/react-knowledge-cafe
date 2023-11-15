@@ -1,0 +1,30 @@
+.sidebar {
+  margin: 0;
+}
+.spent-time {
+  margin: 0;
+  color: #6047ec;
+  background: #6047ec11;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  border-radius: 8px;
+  border: 1px solid #6047ec;
+}
+.bm-blog-cont {
+  margin-top: 20px;
+  background: #1111;
+  border-radius: 8px;
+  padding: 1rem;
+}
+.bm-blog-name {
+  padding: 0.5rem 0.5rem;
+  background: white;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+.bm-blog-name p {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+}

@@ -1,0 +1,52 @@
+.blog {
+  border-bottom: 1px solid rgb(219, 219, 219);
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+}
+
+.blog .title-img {
+  width: 680px;
+  max-height: 360px;
+  border-radius: 8px;
+}
+.pro-pic {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+.profile-area {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+.profile-cont {
+  display: flex;
+  align-items: center;
+}
+.name-date {
+  line-height: 10px;
+  margin-left: 20px;
+}
+.name-date p {
+  font-weight: bold;
+  font-size: 17px;
+}
+.btn-read {
+  display: block;
+  text-decoration: underline;
+  background: none;
+  font-size: 15px;
+  color: #6047ec;
+  padding-left: 0;
+}
+.btn-read:hover {
+  border: none;
+  outline: none;
+}
+.bookmark {
+  display: flex;
+}
+.bookmark-icon {
+  background: none;
+}
