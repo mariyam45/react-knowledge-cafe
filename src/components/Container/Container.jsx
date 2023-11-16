@@ -7,7 +7,7 @@ import "./Container.css";
 const Container = () => {
   const [blogs, setBlogs] = useState([]);
   const [bookmark, setBookmark] = useState([]);
-  const [time, setTime] = useState([]);
+  const [minutes, setMinutes] = useState([]);
 
   // fetch data from json file
   useEffect(() => {
@@ -17,23 +17,31 @@ const Container = () => {
   }, []);
 
   // hendle bookmark
-  const bookMarkHandler = (blog) => {
+  const bookMarkHandler = (title) => {
     // console.log(blog);
-    const newBookmark = [...bookmark, blog];
+    const newBookmark = [...bookmark, title];
     setBookmark(newBookmark);
   };
 
   // handle Mark Ad read
-  const handleMarkAsRead = (times) => {
-    const newTime = [...time, times];
-    let totalTime = 0;
-    for (const time of newTime) {
-      totalTime = totalTime + time;
-    }
-    setTime(newTime);
-    return totalTime;
-    // console.log("read", totalTime);
-  };
+
+  const handleMarkAsRead = (time) => {
+      
+    const newTime = [...minutes, time]
+    setMinutes(newTime);
+    console.log(newTime);
+    
+  }
+  // const handleMarkAsRead = (times) => {
+  //   const newTime = [...minutes, times];
+  //   // let totalTime = 0;
+  //   // for (const time of newTime) {
+  //   //   totalTime = totalTime + time;
+  //   // }
+  //   setMinutes(newTime);
+  //   return newTime;
+  //   // console.log("read", totalTime);
+  // };
 
   return (
     <div className="container">
@@ -45,11 +53,12 @@ const Container = () => {
             key={blog.id}
             bookMarkHandler={bookMarkHandler}
             handleMarkAsRead={handleMarkAsRead}
+          
           ></Blogs>
         ))}
       </div>
       {/* sidebar component  */}
-      <Sidebar bookmark={bookmark} totalTime={time}></Sidebar>
+      <Sidebar minutes={minutes}   bookmark={bookmark} ></Sidebar>
     </div>
   );
 };

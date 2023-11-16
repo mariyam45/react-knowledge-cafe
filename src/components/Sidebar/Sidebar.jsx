@@ -5,12 +5,13 @@ import "./Sidebar.css";
 
 const Sidebar = (props) => {
   // const { title, time, id } = props.bookmark;
-  const bookmark = props.bookmark;
-  const time = props.times;
-  console.log(time);
+  const title = props.bookmark;
+  console.log(title)
+  const time = props.minutes;
+  
+  // console.log(time);
 
-  // let times = [];
-  // for(const )
+  
 
   // for (const min of time) {
   //   timeTotal = timeTotal + min.time;
@@ -19,22 +20,27 @@ const Sidebar = (props) => {
   // }
   // let length = bookmark.length;
 
-  // let totalTime = 0;
-  // for (const blog of bookmark) {
-  //   totalTime = totalTime + blog.time;
-  //   console.log(totalTime);
-  // }
+  let totalTime = 0;
+  for (const min of time) {
+    totalTime = totalTime + min;
+    console.log(totalTime);
+  }
   // console.log(props.bookmark);
+  
+  
   return (
     <div className="sidebar">
-      <h3 className="spent-time"> Spent time on read : {1}</h3>
+      <h3 className="spent-time"> Spent time on read : {totalTime}</h3>
       <div className="bm-blog-cont">
-        <h3>Bookmarked Blogs: {bookmark.length}</h3>
+        <h3 className="">Bookmarked Blogs: {title.length}</h3>
 
         <div className="bm-blogs">
-          <div className="bm-blog-name">
-            <p>{1}</p>
-          </div>
+          {
+            title.map(eachTitle=> <div className="bm-blog-name">
+            <p>{eachTitle}</p>
+          </div>)
+          }
+          
         </div>
       </div>
     </div>

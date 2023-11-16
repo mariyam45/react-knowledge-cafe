@@ -11,6 +11,8 @@ const Blogs = (props) => {
   const bookMarkHandler = props.bookMarkHandler;
   const handleMarkAsRead = props.handleMarkAsRead;
 
+
+
   //   console.log(name);
   return (
     <div className="blog">
@@ -28,7 +30,7 @@ const Blogs = (props) => {
           <p>{time} min read</p>
           <button
             className="bookmark-icon"
-            onClick={() => bookMarkHandler(props.blog)}
+            onClick={() => bookMarkHandler(title)}
           >
             <FontAwesomeIcon icon={faBookmark} />
           </button>
